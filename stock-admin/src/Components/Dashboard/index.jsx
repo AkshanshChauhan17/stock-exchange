@@ -1,4 +1,7 @@
 import { SearchOutlined } from "@ant-design/icons";
+import SearchStockComp from "./search_stock_comp";
+import StocksMini from "./stock_mini";
+import ClientTable from "./clients_table";
 
 export default function Dashboard() {
     return <div className="dashboard">
@@ -9,6 +12,18 @@ export default function Dashboard() {
                     <SearchOutlined />
                 </div>
             </div>
+        </div>
+
+        <div className="sstoc poppins-regular">
+            <SearchStockComp />
+        </div>
+
+        <div className="smini poppins-regular">
+            <StocksMini />
+        </div>
+
+        <div className="client">
+            <ClientTable />
         </div>
     </div>
 }

@@ -1,24 +1,28 @@
 .navigation {
     * {
-        font-size: 0.8rem;
+        font-size: 14px;
     }
     background-color: white;
     height: calc(100vh - 60px);
-    width: 160px;
+    width: 200px;
     display: grid;
-    gap: 0.4rem;
+    gap: 4px;
     align-content: start;
     padding: 20px;
+    border-right: 1px solid rgb(231, 231, 231);
     &-link {
         display: flex;
         gap: 0.5rem;
         cursor: pointer;
+        padding: 10px;
+        border-radius: 10px;
     }
     &-link:hover {
-        color: red;
+        background-color: rgb(240, 240, 240);
     }
     &-top {
         display: flex;
+        border-bottom: 1px solid rgb(0, 0, 0);
         gap: 10px;
         justify-content: space-between;
         margin-bottom: 20px;
@@ -40,23 +44,170 @@
 }
 
 .dashboard {
-    padding: 20px;
     flex: 1;
     &-top {
-        width: 100%;
+        width: calc(100vw - 280px);
         background-color: white;
+        padding: 10px;
+        border-bottom: 1px solid rgb(231, 231, 231);
         &-left {
             &-search {
                 padding: 6px 10px;
                 display: flex;
                 gap: 10px;
-                background-color: white;
+                background-color: rgb(241, 241, 241);
                 border-radius: 10px;
+                width: fit-content;
                 input {
+                    background-color: rgb(241, 241, 241);
                     padding: 4px 10px;
                     border: 0px;
                     outline: 0px;
                 }
+            }
+        }
+    }
+}
+
+.sstoc {
+    margin: 10px;
+    background-color: white;
+    padding: 20px;
+
+    .search-stock-comp {
+        display: grid;
+        gap: 10px;
+        &-heading {
+            font-weight: 600;
+        }
+        &-inputs {
+            display: flex;
+            gap: 10px;
+            &-input {
+                flex: 1;
+                padding: 10px 20px;
+                display: grid;
+                gap: 10px;
+                background-color: rgb(241, 241, 241);
+                border-radius: 10px;
+                grid-template-columns: auto min-content;
+                input {
+                    background-color: rgb(241, 241, 241);
+                    border: 0px;
+                    outline: 0px;
+                    width: 100%;
+                }
+                input::placeholder {
+                    color: rgb(0, 0, 0);
+                    font-weight: 500;
+                }
+                &-left {
+                    &-heading {
+                        font-size: 12px;
+                        opacity: 0.5;
+                    }
+                }
+            }
+            &-button {
+                background-color: black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            &-button:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+.smini {
+    padding: 10px;
+    .stock-mini {
+        padding: 10px;
+        &-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        &-list {
+            display: flex;
+            gap: 10px;
+            &-stock {
+                display: flex;
+                gap: 20px;
+                background-color: white;
+                padding: 20px 40px;
+                border-radius: 10px;
+                align-items: center;
+                &-logo {
+                    width: 40px;
+                    height: 40px;
+                    aspect-ratio: 1;
+                    background-size: contain;
+                }
+                &-left {
+                    margin-right: 40px;
+                    &-top {
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                    &-bottom {
+                        font-size: 12px;
+                        font-weight: 400;
+                    }
+                }
+                &-mid {
+                    margin-right: 20px;
+                    &-top {
+                        font-size: 12px;
+                        font-weight: 400;
+                    }
+                    &-bottom {
+                        color: rgb(48, 197, 2);
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+                }
+                &-right {
+                    &-top {
+                        font-size: 12px;
+                        font-weight: 400;
+                    }
+                    &-bottom {
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.client-table {
+    padding: 10px 20px;
+    &-top {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        &-title {
+            font-size: 20px;
+        }
+        &-right {
+            display: flex;
+            gap: 20px;
+            &-button {
+                padding: 5px 10px;
+                cursor: pointer;
+            }
+            &-button:hover {
+                background-color: black;
+                color: white;
+                border-radius: 10px;
             }
         }
     }
