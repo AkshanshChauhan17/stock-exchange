@@ -9,7 +9,7 @@ const stock_list_schema = [{
     name: "AAPL",
     sub_name: "Apple Inc",
     stock_price: 287.219,
-    market_cap: "2097.64B"
+    market_cap: "2097.24B"
 }]
 
 export default function StocksMini() {
