@@ -1,6 +1,8 @@
 .navigation {
     * {
         font-size: 14px;
+        text-decoration: none;
+        color: black;
     }
     background-color: white;
     height: calc(100vh - 60px);
@@ -210,5 +212,259 @@
                 border-radius: 10px;
             }
         }
+    }
+    &-mid {
+        height: calc(100vh - 460px);
+        overflow-y: scroll;
+        &-table {
+            margin-top: 10px;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            padding: 20px;
+            tr {
+                font-size: 14px;
+            }
+            tr:not(:nth-child(1)):hover {
+                background-color: rgb(231, 231, 231);
+                cursor: pointer;
+            }
+            td {
+                padding: 10px;
+                outline: 1px solid rgb(247, 247, 247);
+                text-align: center;
+            }
+        }
+    }
+}
+
+.view-client {
+    width: calc(100vw - 300px);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    &-info {
+        display: flex;
+        background-color: white;
+        padding: 20px 20px;
+        gap: 20px;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: space-around;
+        &-bp {
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            border-radius: 50%;
+        }
+        &-left {
+            padding-right: 20px;
+            border-right: 1px solid rgb(230, 230, 230);
+            &-top {
+                font-size: 16px;
+                font-weight: 600;
+            }
+            &-bottom {
+                font-size: 12px;
+                opacity: 0.5;
+            }
+        }
+        &-mid {
+            padding-right: 20px;
+            border-right: 1px solid rgb(230, 230, 230);
+            &-top {
+                font-size: 16px;
+                font-weight: 600;
+            }
+            &-bottom {
+                font-size: 12px;
+                opacity: 0.5;
+            }
+        }
+        &-contact {
+            background-color: black;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+.view-client-location {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    gap: 10px;
+    font-size: 16px;
+    &-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.view-client-stocklist-card {
+    .stock-mini {
+        padding: 10px;
+        &-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        &-list {
+            display: flex;
+            gap: 10px;
+            &-stock {
+                display: flex;
+                gap: 20px;
+                background-color: white;
+                padding: 20px 40px;
+                border-radius: 10px;
+                align-items: center;
+                &-logo {
+                    width: 40px;
+                    height: 40px;
+                    aspect-ratio: 1;
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+                &-left {
+                    width: 140px;
+                    margin-right: 40px;
+                    &-top {
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                    &-bottom {
+                        font-size: 12px;
+                        font-weight: 400;
+                    }
+                }
+                &-mid {
+                    margin-right: 20px;
+                    &-top {
+                        font-size: 12px;
+                        font-weight: 400;
+                    }
+                    &-bottom {
+                        color: rgb(48, 197, 2);
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+                }
+                &-right {
+                    &-top {
+                        font-size: 12px;
+                        font-weight: 400;
+                    }
+                    &-bottom {
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.view-client-left {
+    display: grid;
+    gap: 20px;
+}
+
+.view-client-right {
+    display: grid;
+    gap: 20px;
+
+    .view-client-stocklist {
+        display: grid;
+        gap: 10px;
+        &-title {
+            font-size: 20px;
+        }
+    }
+}
+
+.view-client-total {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    gap: 10px;
+    &-left {
+        padding: 10px;
+        background-color: white;
+        flex: 1;
+        border-radius: 10px;
+        &-top {
+            font-size: 12px;
+        }
+        &-bottom {
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+
+    &-mid {
+        padding: 10px;
+        background-color: white;
+        flex: 1;
+        border-radius: 10px;
+        &-top {
+            font-size: 12px;
+        }
+        &-bottom {
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+
+    &-right {
+        padding: 10px;
+        background-color: white;
+        flex: 1;
+        border-radius: 10px;
+        &-top {
+            font-size: 12px;
+        }
+        &-bottom {
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+}
+
+.profit {
+    color:rgb(0, 185, 0);
+}
+
+.loss {
+    color: red;
+}
+
+.view-client-history {
+    height: calc(100vh - 480px);
+    overflow-y: scroll;
+    &-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    &-table {
+        border-radius: 10px;
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+        font-size: 12px;
+        text-align: center;
+    }
+    .completed {
+        color: rgb(0, 192, 0);
+    }
+    .pending {
+        color: rgb(172, 172, 172);
     }
 }

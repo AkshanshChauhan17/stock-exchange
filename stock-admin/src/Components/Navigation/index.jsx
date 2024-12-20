@@ -1,6 +1,7 @@
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 import { nav_struct } from "./structure";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navigation() {
     const [menuOpen, setMenuOpen] = useState(true);
@@ -13,10 +14,10 @@ export default function Navigation() {
         </div>
         {
             nav_struct.map((e, i)=>{
-                return <div className="navigation-link" key={i}>
+                return <Link to={e.url} className="navigation-link" key={i}>
                     <div className="navigation-link-icon poppins-medium">{e.icon}</div>
                     <div className="navigation-link-text poppins-medium">{e.name}</div>
-                </div>
+                </Link>
             })
         }
     </div>
